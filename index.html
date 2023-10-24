@@ -27,7 +27,69 @@
             </div>
         </div>
     </div>
-    <!--about section-->
+    <!--------------------about section---------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/resImg-removebg-preview.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Welcome to my portfolio! I am a passionate Solidity Developer and Blockchain enthusiast with a strong foundation in Solidity. I am working on project focused on developing a decentralized voting application on the Ethereum blockchain, showcasing my skills in smart contract implementation and blockchain technology.<br/>
+                         Alongside this, I am actively exploring competitive programming with a specialization in Java and have a knack for web development using HTML, CSS, and JavaScript. I thrive on transforming creative ideas into tangible solutions through my coding expertise.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <!--skills------------------------>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Blockchain Developer</span><br/>Ethereum Blockchain</li>
+                            <li><span>Competitive Programmer</span><br/>Java</li>
+                            <li><span>Web Developer</span><br/>Building Web applications</li>
+                        </ul>
+                    </div>
+                    <!--experience--------------------->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Ethereum Developer</span><br/>Have developed many blockcahin based appliction using Ganache and truffle framework.</li>
+                            <li><span>Competitive Programmer</span><br/>Polishing my DSA skills through actively participating in coding contests.</li>
+                            <li><span>Web Developer</span><br/>Building Web applications with HTML CSS and JavaScript skills</li>
+                        </ul>
+                    </div>
+                    <!--education----------------------->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2026</span><br/>B-Tech in Computer Science and Engineering</li>
+                            <li><span>2021</span><br/>Intermediate</li>
+                            <li><span>2019</span><br/>Highschool</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+       var tablinks=document.getElementsByClassName("tab-links");
+       var tabcontents=document.getElementsByClassName("tab-contents");
+
+       function  opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+       }
     
+    </script>
 </body>
 </html>
